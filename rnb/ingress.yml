@@ -20,7 +20,7 @@ spec:
   - hosts:
     - rootsnbranches.me
     - www.rootsnbranches.me
-    secretName: rnb-ingress-tls
+    secretName: rootsnbranches-me-tls
   rules:
   - host: rootsnbranches.me
     host: www.rootsnbranches.me
