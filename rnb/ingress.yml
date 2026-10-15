@@ -23,13 +23,11 @@ spec:
     secretName: rootsnbranches-me-tls
   rules:
   - host: rootsnbranches.me
-    host: www.rootsnbranches.me
-    http:
+    http: &rnb
       paths:
       - path: /
         pathType: Prefix
         backend:
-          service:
-            name: rnb
-            port:
-              number: 80
+          service: {name: rnb, port: {number: 80}}
+  - host: www.rootsnbranches.me
+    http: *rnb
